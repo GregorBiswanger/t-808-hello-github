@@ -1,0 +1,94 @@
+name: Bug Report
+description: Melde einen reproduzierbaren Fehler
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - dein-github-username
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass Du einen Bug meldest.
+        Bitte fülle die folgenden Felder möglichst vollständig aus.
+
+  - type: checkboxes
+    id: existing-issues
+    attributes:
+      label: Vorab geprüft?
+      description: Bitte prüfe, ob es bereits ein ähnliches Issue gibt.
+      options:
+        - label: Ich habe nach bestehenden Issues gesucht.
+          required: true
+
+  - type: input
+    id: affected-version
+    attributes:
+      label: Betroffene Version
+      description: Welche Version ist betroffen?
+      placeholder: "z. B. 1.4.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bereich
+      description: In welchem Bereich tritt das Problem auf?
+      options:
+        - UI
+        - API
+        - Dokumentation
+        - Build/Deployment
+        - Sonstiges
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Aktuelles Verhalten
+      description: Was passiert aktuell?
+      placeholder: "Beschreibe den Fehler möglichst konkret."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Erwartetes Verhalten
+      description: Was hättest Du erwartet?
+      placeholder: "Beschreibe das gewünschte Verhalten."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Schritte zur Reproduktion
+      description: Wie kann man den Fehler nachvollziehen?
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevante Logs
+      description: Füge hier relevante Logs ein. Sie werden als Codeblock formatiert.
+      render: shell
+    validations:
+      required: false
+
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Screenshots oder Dateien
+      description: Lade bei Bedarf Screenshots, Logs oder andere relevante Dateien hoch.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.log,.txt,.zip"
