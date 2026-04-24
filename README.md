@@ -1,6 +1,8 @@
 # GitHub Workshop
 Lorem ipsum
 
+[🐞 Bug melden](https://github.com/GregorBiswanger/t-808-hello-github/issues/new?labels=bug,feature&title=Fehler%20gefunden)
+
 console.log('Hello World');
 
 ```javascript
